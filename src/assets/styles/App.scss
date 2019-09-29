@@ -24,6 +24,11 @@ $radius-big: 20px;
   top: 0;
   padding-top:1px;
   position: relative;
+  height: calc(100vh - 40px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   // position: fixed;
   // min-height: 300px;
   // height: $jumbotron-height;
@@ -33,10 +38,10 @@ $radius-big: 20px;
     content: '';
     width: 55vh;
     height: 55vh;
-    background: linear-gradient(180deg, rgba(255, 15, 15, 0.84) 0%, rgba(255, 122, 0, 0.8) 100%);
+    background: linear-gradient(180deg, rgba(253, 49, 49, 0.84) 0%, rgba(251, 140, 35, 0.904) 100%);
     border-radius: 50%;
     position: absolute;
-    top: 20vh;
+    bottom: 0vh;
     left: -40vh;
     display: inline-block;
   }
@@ -54,7 +59,7 @@ $radius-big: 20px;
   }
   @media (min-width: 720px) {
     ::before {
-      top: -15vw;
+      bottom: -15vw;
       left: -60vw;
       width: 80vw;
       height: 80vw;
@@ -69,7 +74,7 @@ $radius-big: 20px;
   }
   @media (min-width: 980px) {
     ::before {
-      top: -03px;
+      bottom: -03px;
       left: -400px;
       width: 588px;
       height: 588px;
@@ -145,7 +150,7 @@ $radius-big: 20px;
       display: block;
     }
     .self--name {
-      margin-left: 30px;
+      margin-left: 40px;
       line-height: 40px;
       font-size: 70px;
     }
@@ -178,7 +183,7 @@ $radius-big: 20px;
       font-size: 80px;
     }
     .self--description {
-      margin-top: 30px;
+      margin-top: 55px;
       width: 100%;
       text-align:center;
       box-sizing: border-box;
@@ -198,6 +203,11 @@ $radius-big: 20px;
       text-decoration: none;
       color: black;
       font-size: 25px;
+      transform: rotate(180deg);
+      // transition: 0.1s;
+    }
+    a:hover {
+      // transition: 0.1s;
     }
     .link--github { font-family: 'roboto condensed','sanserif' }
     .link--medium { font-family: 'rozha one','sanserif'; font-weight: bold }
